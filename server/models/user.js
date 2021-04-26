@@ -11,6 +11,7 @@ const userSchema = new Schema({
     location: String,
     hireDate: Date, 
     description: String,
+    type: String,
     severity: String,
     status: String,
     comment: String 

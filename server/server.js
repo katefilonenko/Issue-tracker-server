@@ -20,8 +20,10 @@ app.use(cors(corsOptions));
 
 const api = require('./routes/api');
 const location = require('./routes/locations');
+const comment = require('./routes/updateComment');
 app.use('/api', api);
 app.use('/location', location);
+app.use('/comment', comment);
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {

@@ -57,6 +57,7 @@ router.post('/', (req, res) => {
     location: req.body.location,
     hireDate: req.body.hireDate,
     description: req.body.description,
+    type: req.body.type,
     severity: req.body.severity,
     status: req.body.status,
     comment: req.body.comment
@@ -101,22 +102,24 @@ router.put('/:id', async (req, res) => {
           name: req.body.name,
           username: req.body.username,
           email: req.body.email,
-          password: req.body.password,
           location: req.body.location,
           hireDate: req.body.hireDate,
           description: req.body.description,
+          type: req.body.type,
           severity: req.body.severity,
           status: req.body.status,
           comment: req.body.comment
         }
       }
     );
+    console.log(req.body)
     res.send(updatedUser);
   } catch {
     res.json({ message: err });
   }
-
 });
+
+
 
 
 router.delete('/:id', async (req, res) => {
